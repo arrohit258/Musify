@@ -1,10 +1,16 @@
-.App {
+body {
   text-align: center;
+  background-image: url("./assets/wall.jpg");
+  height:100% ;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.text{
+  text-align: center;
+  color: #61dafb;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,7 +21,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height:100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
