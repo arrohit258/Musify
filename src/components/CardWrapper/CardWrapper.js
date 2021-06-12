@@ -18,8 +18,8 @@ const CardWrapper = () => {
     let location=useLocation() 
  
     const {access_token,refresh_token}=queryString.parse(location.search)
-    console.log('a',access_token)
-    console.log('r',refresh_token)
+    //console.log('a',access_token)
+   // console.log('r',refresh_token)
     const [cardInfo,setCardInfo]=useState([])
    //let cardInfo=[]
 
@@ -30,7 +30,7 @@ const CardWrapper = () => {
     useLayoutEffect(()=>{
         if(!access_token)return null
         async function getMyTopTracks(){
-            console.log("hi")
+          //  console.log("hi")
 
             await spotifyApi.setAccessToken(access_token)
             await spotifyApi.getMyTopTracks({limit:4,time_range:'long_term'})
@@ -58,27 +58,27 @@ const CardWrapper = () => {
 
         }
 
-     console.log(cardInfo)
+    // console.log(cardInfo)
 
          getMyTopTracks()
          return null
 
         
     }, [access_token])
-    console.log(cardInfo)
+   // console.log(cardInfo)
    
     let suggestionUrl=`${ENDPOINT}suggestions?access_token=${access_token}&refresh_token=${refresh_token}`
     let statUrl=`${ENDPOINT}getStats?access_token=${access_token}&refresh_token=${refresh_token}`
    
     const renderCards=(card,index)=>{
-        console.log("1",card)
+        //console.log("1",card)
         return(<Grid padded xs={12} sm={6} lg={3}>
            <Cards image={card.image} url={card.url} name={card.name} />
            </Grid>
         )
     }
 
-console.log(cardInfo)
+//console.log(cardInfo)
 
 return ( <div>
      

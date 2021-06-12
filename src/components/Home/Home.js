@@ -7,7 +7,7 @@ import SpotifyWebApi from 'spotify-web-api-js'
 import {client_id} from '../../AuthParams/authKey'
 import {client_secret} from '../../AuthParams/authSecret'
 import { Dimmer, Loader, Image, Segment } from 'semantic-ui-react'
-
+const ENDPOINT='http://localhost:3000/'
 export const Home = () => {
     let spotifyApi=new SpotifyWebApi()
     let location=useLocation()
@@ -24,7 +24,7 @@ export const Home = () => {
      const body={
             grant_type:"authorization_code",
             code:code,
-            redirect_uri:'http://localhost:3000/home',
+            redirect_uri:`${ENDPOINT}home`,
             client_id:client_id,
             client_secret:client_secret,
           
@@ -45,12 +45,12 @@ export const Home = () => {
         }
            
               
-        console.log(options)
+    //    console.log(options)
      
        
         axios(options)
         .then((data)=>{
-           console.log(data)
+          // console.log(data)
             // console.log(data.data.refresh_token)
             setAccessToken(data.data.access_token)
             //if(data.data.refresh_token)

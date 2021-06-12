@@ -9,13 +9,13 @@ import {client_id} from '../../AuthParams/authKey'
 
 
 import './Login.css'
-
+const ENDPOINT='http://localhost:3000/'
 const Login = () => {
 	let history=useHistory()
 	const response_type='code'
-	const redirect_uri='http://localhost:3000/home'
+	const redirect_uri=`${ENDPOINT}home`
 	const authUrl=`https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=${response_type}&redirect_uri=${redirect_uri}&scope=user-top-read ugc-image-upload`
-  console.log(authUrl)
+  //console.log(authUrl)
 	const handleClick=()=>{
 		//history.push('https://accounts.spotify.com/authorize?client_id=cb70eaed88a34c4c98c8f940a76d7844&response_type=code&redirect_uri=http://localhost:3000')
 		history.push('/home')

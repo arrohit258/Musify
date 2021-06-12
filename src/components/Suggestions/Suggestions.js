@@ -21,7 +21,7 @@ const Suggestions = () => {
     useLayoutEffect(()=>{
         if(!access_token)return null
         async function getMyTopTracks(){
-            console.log("hi")
+        //    console.log("hi")
 
             await spotifyApi.setAccessToken(access_token)
             await spotifyApi.getMyTopTracks({limit:4,time_range:'long_term'})
@@ -30,7 +30,7 @@ const Suggestions = () => {
                     // console.log(data)
                     // console.log(data.items[0].album.images[1].url)
                     await data.items.forEach(item => {
-                       console.log(item.id)
+                     //  console.log(item.id)
                     
                          setIds(ids=>[...ids,item.id])
                      
@@ -44,7 +44,7 @@ const Suggestions = () => {
 
         }
 
-     console.log("arr",ids)
+    // console.log("arr",ids)
 
      getMyTopTracks()
         
@@ -53,14 +53,14 @@ const Suggestions = () => {
     }, [access_token])
 
     useEffect(()=>{
-        if(ids.length<4)return null
+        if(ids.length!==4 || suggestedCard.length>=4)return null
         async function getRecommendations(){
            // await spotifyApi.setAccessToken(access_token)
             await spotifyApi.getRecommendations({limit:50,seed_tracks:ids})
             .then(async(data,err)=>{
                 setSuggestedCards([]) 
                if(data){
-                   console.log(data)
+                 //  console.log(data)
                    let arr=[]  
                    
                    await data.tracks.forEach(track=>{
@@ -69,7 +69,7 @@ const Suggestions = () => {
 
                    })
                    // setSuggestedCards(arr)
-                   console.log("s",suggestedCard)
+                  // console.log("s",suggestedCard)
 
                }else{
                    console.log(err)
@@ -83,10 +83,10 @@ const Suggestions = () => {
         getRecommendations()
 
     },[ids])
-console.log(suggestedCard)
+//console.log(suggestedCard)
 
 const renderCards=(card,index)=>{
-    console.log("1",card)
+   // console.log("1",card)
     return(<Grid padded xs={12} sm={6} lg={3}>
        <Cards image={card.image} url={card.url} name={card.name} />
        </Grid>

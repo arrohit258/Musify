@@ -4,8 +4,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 
 const Cards = ({image,name,url}) => {
-    console.log('cardsji')
-    console.log('1',image,url,name)
+    
     return (
         <div>
             <Card color="green">
