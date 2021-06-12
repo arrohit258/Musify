@@ -1,3 +1,21 @@
+# About the Project
+Musify is an application that allows you to login with spotify, recommends you songs on the base of your most listened songs and also tells some interesting features about your songs. It is built using ReactJS, Spotify API, Semantic UI.
+
+![image](https://user-images.githubusercontent.com/63255932/121788235-65c28f00-cbe9-11eb-85b5-8aeeb0697b6d.png)
+
+![image](https://user-images.githubusercontent.com/63255932/121788264-8e4a8900-cbe9-11eb-8341-79c5990732f0.png)
+
+![image](https://user-images.githubusercontent.com/63255932/121788281-b33efc00-cbe9-11eb-92b6-016fd3757c9f.png)
+
+![image](https://user-images.githubusercontent.com/63255932/121788293-cce04380-cbe9-11eb-90e8-a9bf97903bd1.png)
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
