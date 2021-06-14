@@ -1,5 +1,5 @@
 # About the Project
-Musify is an application that allows you to login with spotify, recommends you songs on the base of your most listened songs and also tells some interesting features about your songs. It is built using ReactJS, Spotify API, Semantic UI and Chart.js
+Musify is an application that allows you to login with spotify, recommends you songs on the base of your most listened songs and also tells some interesting features about your songs. It is built using ReactJS, Spotify API, Semantic UI and Chart.js. You can see the site live at https://musify1234.netlify.app/
 
 ![image](https://user-images.githubusercontent.com/63255932/121909597-b3efa380-cd4b-11eb-83b7-cb3e2dec97af.png)
 
